@@ -37,9 +37,11 @@ function App() {
       })}
       <br></br>
       <p>below is a example of spreading</p>
-      {EmployeeInfo.map((employee) => {
-        return <Employee key={employee.id} {...employee} />;
-      })}
+      <div>
+        {EmployeeInfo.map((employee) => {
+          return <Employee key={employee.id} {...employee} />;
+        })}
+      </div>
     </div>
   );
 }
