@@ -1,6 +1,7 @@
 import Counter from "./Components/Counter";
 import Employee from "./Components/Employee";
 import Testimon from "./Components/Testimon";
+import "./CSS/layout.css";
 
 function App() {
   const EmployeeInfo = [
