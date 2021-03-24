@@ -1,5 +1,6 @@
 import Counter from "./Components/Counter";
 import Employee from "./Components/Employee";
+import Testimon from "./Components/Testimon";
 
 function App() {
   const EmployeeInfo = [
@@ -23,6 +24,21 @@ function App() {
     },
   ];
 
+  const testimonLst = [
+    {
+      id: 1,
+      name: "Janice",
+      message:
+        "the photographer did an amaazing job. Very interactable and help us with the posing.",
+    },
+    {
+      id: 2,
+      name: "bob",
+      message:
+        "my photographer did an amaazing job. Very interactable and help us with the posing.",
+    },
+  ];
+
   return (
     <div className="App">
       <Counter />
@@ -40,6 +56,11 @@ function App() {
       <div>
         {EmployeeInfo.map((employee) => {
           return <Employee key={employee.id} {...employee} />;
+        })}
+      </div>
+      <div className="Testimon">
+        {testimonLst.map((testimon) => {
+          return <Testimon key={testimon.id} {...testimon} />;
         })}
       </div>
     </div>
