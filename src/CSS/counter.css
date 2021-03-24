@@ -1,0 +1,14 @@
+.Counter {
+  font-size: 2rem;
+  font-weight: bold;
+
+  margin: 300px auto;
+  margin-bottom: 30px;
+}
+
+.btnStyle {
+  border: none;
+  padding: 2.5rem;
+  width: 50%;
+  margin: 3rem;
+}
