@@ -23,7 +23,7 @@ const initialState = {
   count: 0,
 };
 
-export default (state = initialState, action) => {
+export default function counter(state = initialState, action) {
   //controls what happens based on which action is called
   switch (action.type) {
     case INCREMENT:
@@ -35,4 +35,4 @@ export default (state = initialState, action) => {
     default:
       return state;
   }
-};
+}
