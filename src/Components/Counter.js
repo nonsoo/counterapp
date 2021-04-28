@@ -1,22 +1,43 @@
 import React from "react";
-import { useState } from "react";
-import "../CSS/counter.css";
+import { useSelector, useDispatch } from "react-redux";
+import { decrement, increment, reset } from "../redux/ducks/counter";
 
 const Counter = () => {
-  const [count, setCount] = useState(0);
+  //useSelector allows us to access variable that are in our redux store
+  //first need to access the reducer that the varible is inside of therefore
+  //state.counter
+  //then access the actual variable therefore state.counter.count
+  const count = useSelector((state) => state.counter.count);
+
+  //The dispatch is goign to async send an action to the redux store which is
+  //going to dispatch an action that the reducer has
+  const dispatch = useDispatch();
+
+  const doIncrement = () => {
+    dispatch(increment());
+  };
+
+  const doDecrement = () => {
+    dispatch(decrement());
+  };
+  const doResetCount = () => {
+    dispatch(reset());
+  };
 
   return (
     <div>
       <p className="Counter">The count is: {count}</p>
-      <button className="btnStyle" onClick={() => setCount(count + 1)}>
-        Increment
-      </button>
-      <button className="btnStyle" onClick={() => setCount(count - 1)}>
-        Decrement
-      </button>
-      <button className="btnStyle" onClick={() => setCount(0)}>
-        Reset
-      </button>
+      <div className="BtnContainer">
+        <button className="btnStyle" onClick={doIncrement}>
+          Increment
+        </button>
+        <button className="btnStyle" onClick={doDecrement}>
+          Decrement
+        </button>
+        <button className="btnStyle" onClick={doResetCount}>
+          Reset
+        </button>
+      </div>
     </div>
   );
 };

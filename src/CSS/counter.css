@@ -1,9 +1,19 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .Counter {
   font-size: 2rem;
   font-weight: bold;
 
   margin: 300px auto;
   margin-bottom: 30px;
+  text-align: center;
+}
+
+.BtnContainer {
+  display: flex;
 }
 
 .btnStyle {
